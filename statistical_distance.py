@@ -10,3 +10,11 @@ def compute_mahalanobis_distance(arr1: np.ndarray, arr1_mean, arr2: np.ndarray, 
 
     return distance
 
+#Normalizing power spectrum and coefficients
+def normalizaiton(data):
+
+    min = data.min(axis=0)
+    max = data.max(axis=0)
+    normalized_data = (data - min)/(max - min)
+    
+    return normalized_data
